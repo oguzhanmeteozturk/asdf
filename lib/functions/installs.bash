@@ -117,8 +117,8 @@ install_local_tool_versions() {
     exit 1
   fi
 
-  if [ -n "$plugins_installed" ]; then
-    for plugin_name in $plugins_installed; do
+  if [ -n "$tools_file" ]; then
+    for plugin_name in $tools_file; do
       local plugin_version_and_path
       plugin_version_and_path="$(find_versions "$plugin_name" "$search_path")"
 
